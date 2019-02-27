@@ -5,11 +5,15 @@ import java.util.ArrayList;
 public class Sale {
 	private ArrayList<Product> products;
 	
-	public void addProduct() {
-		
+	public void addProduct(Product product) {
+		products.add(product);
 	}
 	
 	public double saleValue() {
-		return 0.0;
+		double total = 0;
+		for(int i=0; i<products.size(); i++) {
+			total += products.get(i).getPrice();
+		}
+		return total;
 	}
 }
