@@ -78,7 +78,7 @@ public class Seller {
 	
 	public void makeSale() {
 		Sale sale = new Sale();
-		for(int i=0; i<Math.random()*10+1; i++) {
+		for(int i=0; i<(int)Math.floor(Math.random()*12+1); i++) {
 			sale.addProduct(products.get((int)Math.random()*products.size()));
 		}
 		sales.add(sale);

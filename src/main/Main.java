@@ -1,6 +1,7 @@
 package main;
 
-import java.text.DecimalFormat;
+import java.io.File;
+import java.io.IOException;
 
 import controller.Simulator;
 import model.Company;
@@ -12,6 +13,7 @@ public class Main {
 		Company salesCompany = new Company();
 		Simulator simulator = new Simulator(salesCompany);
 		simulator.payComissionsSimulator();
+		
 	}
 
 }

@@ -3,7 +3,7 @@ package model;
 import java.util.ArrayList;
 
 public class Sale {
-	private ArrayList<Product> products;
+	private ArrayList<Product> products = new ArrayList<Product>();
 	
 	public void addProduct(Product product) {
 		products.add(product);

@@ -1,0 +1,2 @@
+Mes: 6
+Vendedor n°: 4, Nombre: Mariana, Numero de ventas: 11, Monto ventas: $5062.36, Porcentage de comision: %2.024944, Comsion pagada: $102.5099550784

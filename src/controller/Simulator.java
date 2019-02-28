@@ -17,7 +17,11 @@ public class Simulator {
 	public void payComissionsSimulator() {
 		generateSellers();
 		showMonthsCompany();
-		executeOption(forms.companyOptions());
+		int option = 0;
+		do {
+			option = forms.companyOptions();
+			executeOption(option);
+		}while(option != 0);
 	}
 	
 	private void generateSellers() {
@@ -56,11 +60,13 @@ public class Simulator {
 			showMonthsCompany();
 			break;
 		case 3://Ver registro de comisiones
+			
 			break;
 		case 4://realizar mes
 			chooseMonth(forms.formChooseMonth());
 			monthStats(forms.formMonthStats());
 			salesCompany.comissionsPaymet();
+			
 			break;
 		default:
 			System.out.println("Opcion invalida");
@@ -78,7 +84,7 @@ public class Simulator {
 	private void chooseMonth(int month) {
 		salesCompany.addSellersMonth(month);
 		for(int i=0; i<salesCompany.getSellersMonth().size(); i++) {
-			int salesNum = (int)Math.random()*10+1;
+			int salesNum = (int)Math.floor(Math.random()*12);
 			for(int j=0; j<salesNum; j++) {
 				salesCompany.getSellersMonth().get(i).makeSale();
 			}
@@ -89,8 +95,8 @@ public class Simulator {
 		if(stats == 1) {
 			for(int i=0; i<salesCompany.getSellersMonth().size(); i++) { 
 				System.out.println("name: "+salesCompany.getSellersMonth().get(i).getName()+
-						"numero de ventas: "+salesCompany.getSellersMonth().get(i).getSales().size()+
-						"monto total de las ventas: $"+salesCompany.getSellersMonth().get(i).salesAmount());
+						", numero de ventas: "+salesCompany.getSellersMonth().get(i).getSales().size()+
+						", monto total de las ventas: $"+salesCompany.getSellersMonth().get(i).salesAmount());
 			}
 		}
 	}
