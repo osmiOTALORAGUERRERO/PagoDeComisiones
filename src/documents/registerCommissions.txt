@@ -1,0 +1,30 @@
+
+Mes: 2
+Vendedor n°: 1, Nombre: Santiago, Numero de ventas: 10, Monto ventas: $9219.209999999997, Porcentage de comision: %3.687683999999999, Comsion pagada: $339.9753320963998
+Vendedor n°: 2, Nombre: Manuela, Numero de ventas: 2, Monto ventas: $2127.5099999999998, Porcentage de comision: %0.8510039999999999, Comsion pagada: $18.105195200399997
+Vendedor n°: 3, Nombre: Andres, Numero de ventas: 7, Monto ventas: $8273.649999999998, Porcentage de comision: %3.309459999999999, Comsion pagada: $273.8131372899999
+Vendedor n°: 4, Nombre: Mariana, Numero de ventas: 5, Monto ventas: $4255.019999999999, Porcentage de comision: %1.7020079999999995, Comsion pagada: $72.42078080159996
+
+Mes: 4
+Vendedor n°: 5, Nombre: Vladimir, Numero de ventas: 0, Monto ventas: $0.0, Porcentage de comision: %0.0, Comsion pagada: $0.0
+Vendedor n°: 6, Nombre: Oscar, Numero de ventas: 6, Monto ventas: $6618.92, Porcentage de comision: %2.647568, Comsion pagada: $175.24040786560002
+Vendedor n°: 7, Nombre: Jaime, Numero de ventas: 5, Monto ventas: $2363.8999999999996, Porcentage de comision: %0.9455599999999998, Comsion pagada: $22.35209283999999
+Vendedor n°: 8, Nombre: Camila, Numero de ventas: 6, Monto ventas: $6146.1399999999985, Porcentage de comision: %2.4584559999999995, Comsion pagada: $151.10014759839993
+
+Mes: 6
+Vendedor n°: 9, Nombre: Heidy, Numero de ventas: 6, Monto ventas: $5909.749999999999, Porcentage de comision: %2.3638999999999997, Comsion pagada: $139.70058024999997
+Vendedor n°: 10, Nombre: Stiven, Numero de ventas: 10, Monto ventas: $7564.48, Porcentage de comision: %3.025792, Comsion pagada: $228.88543068159998
+Vendedor n°: 1, Nombre: Santiago, Numero de ventas: 5, Monto ventas: $3545.85, Porcentage de comision: %1.41834, Comsion pagada: $50.29220888999999
+Vendedor n°: 2, Nombre: Manuela, Numero de ventas: 8, Monto ventas: $6382.529999999999, Porcentage de comision: %2.5530119999999994, Comsion pagada: $162.94675680359992
+
+Mes: 7
+Vendedor n°: 3, Nombre: Andres, Numero de ventas: 5, Monto ventas: $4255.0199999999995, Porcentage de comision: %1.7020079999999997, Comsion pagada: $72.42078080159999
+Vendedor n°: 4, Nombre: Mariana, Numero de ventas: 3, Monto ventas: $3073.0699999999997, Porcentage de comision: %1.229228, Comsion pagada: $37.775036899599996
+Vendedor n°: 5, Nombre: Vladimir, Numero de ventas: 9, Monto ventas: $8746.429999999998, Porcentage de comision: %3.4985719999999993, Comsion pagada: $306.0001509795999
+Vendedor n°: 6, Nombre: Oscar, Numero de ventas: 4, Monto ventas: $3545.8499999999995, Porcentage de comision: %1.4183399999999997, Comsion pagada: $50.29220888999998
+
+Mes: 5
+Vendedor n°: 7, Nombre: Jaime, Numero de ventas: 0, Monto ventas: $0.0, Porcentage de comision: %0.0, Comsion pagada: $0.0
+
+Mes: 7
+Vendedor n°: 1, Nombre: Santiago, Numero de ventas: 1, Monto ventas: $205.94, Porcentage de comision: %0.082376, Comsion pagada: $0.1696451344
