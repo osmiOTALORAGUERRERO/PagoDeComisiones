@@ -24,7 +24,7 @@ public class Company {
 		defineMonths();
 		try {
 			if (!registerCommissions.exists()) {   
-					registerCommissions.createNewFile();				
+				registerCommissions.createNewFile();				
 	        }
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -66,8 +66,8 @@ public class Company {
 	
 	private void generateRegister(Seller sellerMonth) {
 		try {
-			br = new BufferedWriter(new FileWriter(registerCommissions));
-			br.write("Mes: "+currentMonth+"\n");
+			br = new BufferedWriter(new FileWriter(registerCommissions,true));
+			br.write("\nMes: "+currentMonth+"\n");
 			br.write("Vendedor n°: "+sellerMonth.getId()+", Nombre: "+sellerMonth.getName()+
 					", Numero de ventas: "+sellerMonth.getSales().size()+", Monto ventas: $"+sellerMonth.salesAmount()+
 					", Porcentage de comision: %"+sellerMonth.getPorcentage()+", Comsion pagada: $"+sellerMonth.getComission());
@@ -98,6 +98,7 @@ public class Company {
 			}else {
 				i = 0;
 				sellersMonth.add(sellers.get(i));
+				i++;
 			}			
 		}while(sellersMonth.size() != months[month-1].getNumberSellers());
 	}
@@ -117,5 +118,12 @@ public class Company {
 		double porcentage = 2;
 		porcentage = ammount*porcentage/5000;
 		return porcentage;
+	}
+	
+	public void endMonth() {
+		for(int i=0; i<sellersMonth.size(); i++) {
+			sellersMonth.get(i).getSales().clear();
+		}
+		sellersMonth.clear();
 	}
 }

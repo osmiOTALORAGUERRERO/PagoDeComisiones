@@ -66,7 +66,7 @@ public class Simulator {
 			chooseMonth(forms.formChooseMonth());
 			monthStats(forms.formMonthStats());
 			salesCompany.comissionsPaymet();
-			
+			salesCompany.endMonth();
 			break;
 		default:
 			System.out.println("Opcion invalida");
