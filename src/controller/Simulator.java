@@ -1,5 +1,9 @@
 package controller;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 import model.Company;
 import model.Month;
 import view.Forms;
@@ -60,7 +64,7 @@ public class Simulator {
 			showMonthsCompany();
 			break;
 		case 3://Ver registro de comisiones
-			
+			showRegistry();
 			break;
 		case 4://realizar mes
 			chooseMonth(forms.formChooseMonth());
@@ -99,5 +103,18 @@ public class Simulator {
 						", monto total de las ventas: $"+salesCompany.getSellersMonth().get(i).salesAmount());
 			}
 		}
+	}
+	
+	private void showRegistry() {
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(salesCompany.getRegiFile()));
+			while(br.readLine() != null) {
+				System.out.println(br.readLine());
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }

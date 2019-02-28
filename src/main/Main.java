@@ -1,11 +1,12 @@
 package main;
 
-import java.io.File;
-import java.io.IOException;
-
 import controller.Simulator;
 import model.Company;
-
+/**
+ * 
+ * @author Osmi Santiago Otálora Guerrero
+ *
+ */
 public class Main {
 	
 	public static void main (String[] args) {

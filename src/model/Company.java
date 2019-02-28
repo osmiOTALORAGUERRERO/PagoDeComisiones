@@ -31,6 +31,10 @@ public class Company {
 		}
 	}	
 	
+	public File getRegiFile() {
+		return registerCommissions;
+	}
+	
 	public ArrayList<Seller> getSellersMonth() {
 		return sellersMonth;
 	}
@@ -55,23 +59,26 @@ public class Company {
 	}
 	
 	public void comissionsPaymet() {
-		System.out.println("Definiendo comisiones de empleados...");
-		System.out.print(sellersMonth);
-		for(int i=0; i<sellersMonth.size(); i++) {
-			sellersMonth.get(i).setPorcentage(commissionPorcentage(sellersMonth.get(i).salesAmount()));
-			sellersMonth.get(i).setComission(calculateComission(sellersMonth.get(i).getPorcentage(), sellersMonth.get(i).salesAmount()));
-			generateRegister(sellersMonth.get(i));
+		try {
+			br = new BufferedWriter(new FileWriter(registerCommissions,true));
+			br.write("\nMes: "+currentMonth+"\n");		
+			System.out.println("Definiendo comisiones de empleados...");
+			for(int i=0; i<sellersMonth.size(); i++) {
+				sellersMonth.get(i).setPorcentage(commissionPorcentage(sellersMonth.get(i).salesAmount()));
+				sellersMonth.get(i).setComission(calculateComission(sellersMonth.get(i).getPorcentage(), sellersMonth.get(i).salesAmount()));
+				generateRegister(sellersMonth.get(i));
+			}
+			br.close();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 	
 	private void generateRegister(Seller sellerMonth) {
 		try {
-			br = new BufferedWriter(new FileWriter(registerCommissions,true));
-			br.write("\nMes: "+currentMonth+"\n");
 			br.write("Vendedor n°: "+sellerMonth.getId()+", Nombre: "+sellerMonth.getName()+
 					", Numero de ventas: "+sellerMonth.getSales().size()+", Monto ventas: $"+sellerMonth.salesAmount()+
-					", Porcentage de comision: %"+sellerMonth.getPorcentage()+", Comsion pagada: $"+sellerMonth.getComission());
-			br.close();
+					", Porcentage de comision: %"+sellerMonth.getPorcentage()+", Comsion pagada: $"+sellerMonth.getComission()+"\n");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

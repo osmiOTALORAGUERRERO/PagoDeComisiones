@@ -20,6 +20,7 @@ public class Forms {
 			op = Integer.parseInt(br.readLine());
 		} catch (NumberFormatException | IOException e) {
 			System.out.println("Error caracter ingresado: "+e);
+			return companyOptions();
 		}
 		return op;
 	}
