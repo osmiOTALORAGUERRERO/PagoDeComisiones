@@ -62,3 +62,7 @@ Vendedor n°: 1, Nombre: Santiago, Numero de ventas: 1, Monto ventas: $499.68, P
 Vendedor n°: 2, Nombre: Manuela, Numero de ventas: 0, Monto ventas: $0.0, Porcentage de comision: %0.0, Comsion pagada: $0.0
 Vendedor n°: 3, Nombre: Andres, Numero de ventas: 9, Monto ventas: $4746.960000000001, Porcentage de comision: %1.8987840000000005, Comsion pagada: $90.13451696640004
 Vendedor n°: 4, Nombre: Mariana, Numero de ventas: 7, Monto ventas: $3997.44, Porcentage de comision: %1.598976, Comsion pagada: $63.9181062144
+
+Mes: 7
+Vendedor n°: 5, Nombre: Vladimir, Numero de ventas: 0, Monto ventas: $0.0, Porcentage de comision: %0.0, Comsion pagada: $0.0
+Vendedor n°: 6, Nombre: Oscar, Numero de ventas: 8, Monto ventas: $3372.8400000000006, Porcentage de comision: %1.3491360000000003, Comsion pagada: $45.50419866240002
