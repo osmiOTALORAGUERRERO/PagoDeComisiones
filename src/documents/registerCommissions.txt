@@ -28,3 +28,37 @@ Vendedor n°: 7, Nombre: Jaime, Numero de ventas: 0, Monto ventas: $0.0, Porcent
 
 Mes: 7
 Vendedor n°: 1, Nombre: Santiago, Numero de ventas: 1, Monto ventas: $205.94, Porcentage de comision: %0.082376, Comsion pagada: $0.1696451344
+
+Mes: 1
+Vendedor n°: 1, Nombre: Santiago, Numero de ventas: 7, Monto ventas: $7510.139999999999, Porcentage de comision: %3.004056, Comsion pagada: $225.60881127839994
+Vendedor n°: 2, Nombre: Manuela, Numero de ventas: 6, Monto ventas: $5689.5, Porcentage de comision: %2.2758, Comsion pagada: $129.48164099999997
+Vendedor n°: 3, Nombre: Andres, Numero de ventas: 7, Monto ventas: $8420.46, Porcentage de comision: %3.368184, Comsion pagada: $283.61658644639994
+Vendedor n°: 4, Nombre: Mariana, Numero de ventas: 7, Monto ventas: $7054.98, Porcentage de comision: %2.821992, Comsion pagada: $199.09097120159996
+
+Mes: 2
+Vendedor n°: 5, Nombre: Vladimir, Numero de ventas: 11, Monto ventas: $7737.719999999999, Porcentage de comision: %3.0950879999999996, Comsion pagada: $239.48924319359995
+
+Mes: 12
+Vendedor n°: 1, Nombre: Santiago, Numero de ventas: 8, Monto ventas: $4269.26, Porcentage de comision: %1.707704, Comsion pagada: $72.90632379040001
+
+Mes: 10
+Vendedor n°: 1, Nombre: Santiago, Numero de ventas: 2, Monto ventas: $888.93, Porcentage de comision: %0.355572, Comsion pagada: $3.1607861795999996
+Vendedor n°: 2, Nombre: Manuela, Numero de ventas: 6, Monto ventas: $2568.02, Porcentage de comision: %1.027208, Comsion pagada: $26.378906881599995
+
+Mes: 5
+Vendedor n°: 1, Nombre: Santiago, Numero de ventas: 3, Monto ventas: $3957.1499999999996, Porcentage de comision: %1.58286, Comsion pagada: $62.636144489999985
+Vendedor n°: 2, Nombre: Manuela, Numero de ventas: 10, Monto ventas: $10816.210000000003, Porcentage de comision: %4.326484000000001, Comsion pagada: $467.9615950564002
+Vendedor n°: 3, Nombre: Andres, Numero de ventas: 9, Monto ventas: $8969.54, Porcentage de comision: %3.5878160000000006, Comsion pagada: $321.81059124640007
+Vendedor n°: 4, Nombre: Mariana, Numero de ventas: 4, Monto ventas: $4220.96, Porcentage de comision: %1.688384, Comsion pagada: $71.2660132864
+
+Mes: 10
+Vendedor n°: 1, Nombre: Santiago, Numero de ventas: 2, Monto ventas: $1961.4, Porcentage de comision: %0.78456, Comsion pagada: $15.38835984
+Vendedor n°: 2, Nombre: Manuela, Numero de ventas: 6, Monto ventas: $4623.299999999999, Porcentage de comision: %1.8493199999999996, Comsion pagada: $85.49961155999998
+Vendedor n°: 3, Nombre: Andres, Numero de ventas: 3, Monto ventas: $1401.0, Porcentage de comision: %0.5604, Comsion pagada: $7.851204
+Vendedor n°: 4, Nombre: Mariana, Numero de ventas: 1, Monto ventas: $140.1, Porcentage de comision: %0.05604, Comsion pagada: $0.07851203999999999
+
+Mes: 2
+Vendedor n°: 1, Nombre: Santiago, Numero de ventas: 1, Monto ventas: $499.68, Porcentage de comision: %0.199872, Comsion pagada: $0.9987204096
+Vendedor n°: 2, Nombre: Manuela, Numero de ventas: 0, Monto ventas: $0.0, Porcentage de comision: %0.0, Comsion pagada: $0.0
+Vendedor n°: 3, Nombre: Andres, Numero de ventas: 9, Monto ventas: $4746.960000000001, Porcentage de comision: %1.8987840000000005, Comsion pagada: $90.13451696640004
+Vendedor n°: 4, Nombre: Mariana, Numero de ventas: 7, Monto ventas: $3997.44, Porcentage de comision: %1.598976, Comsion pagada: $63.9181062144

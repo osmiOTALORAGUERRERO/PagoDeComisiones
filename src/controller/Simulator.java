@@ -1,33 +1,36 @@
 package controller;
 
 import java.awt.Desktop;
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 
 import model.Company;
 import model.Month;
 import view.CommissionsGUI;
-import view.Forms;
 
-public class Simulator {
+public class Simulator implements ActionListener{
 	
 	Company salesCompany;
-	Forms forms = new Forms();
+	CommissionsGUI comGUI;
 	
-	public Simulator(Company salesCompany, CommissionsGUI comGUI) {
+	public Simulator(Company salesCompany, CommissionsGUI comGUI) {	
+		this.comGUI= comGUI;
 		System.out.println("Compañia de ventas SalesCompany");
 		this.salesCompany = salesCompany;
+		addActionsBottons();
+	}
+	
+	public void addActionsBottons() {
+		comGUI.jbSellers.addActionListener(this);
+		comGUI.jbMonth.addActionListener(this);
+		comGUI.jbRegistry.addActionListener(this);
+		comGUI.jbMakeMoth.addActionListener(this);
 	}
 	
 	public void payComissionsSimulator() {
 		generateSellers();
-		showMonthsCompany();
-		int option = 0;
-		do {
-			option = forms.companyOptions();
-			executeOption(option);
-		}while(option != 0);
+		comGUI.jtaAnswers.setText(showMonthsCompany());
 	}
 	
 	private void generateSellers() {
@@ -44,47 +47,22 @@ public class Simulator {
 		salesCompany.addSeller("Stiven", 10);
 	}
 	
-	private void showMonthsCompany() {
-		System.out.println(" Organizacion de los Meses de la compañia");
+	private String showMonthsCompany() {
+		String strMonths = "Organizacion de los Meses de la compañia\n";
 		Month[] months = salesCompany.getMonths(); 
 		for(int i=0; i<months.length; i++) {
-			System.out.println("Mes "+(i+1)+": temporada "+months[i].getSeason()+", vendedores: "+months[i].getNumberSellers());
+			strMonths += "Mes "+(i+1)+": temporada "+months[i].getSeason()+", vendedores: "+months[i].getNumberSellers()+"\n";
 		}
+		return strMonths;
 	}
 	
-	
-	
-	private void executeOption(int option) {
-		switch (option) {
-		case 0:
-			System.out.println("bye");
-			break;			
-		case 1://ver vendedores
-			showSellers();
-			break;
-		case 2://Ver meses
-			showMonthsCompany();
-			break;
-		case 3://Ver registro de comisiones
-			showRegistry();
-			break;
-		case 4://realizar mes
-			chooseMonth(forms.formChooseMonth());
-			monthStats(forms.formMonthStats());
-			salesCompany.comissionsPaymet();
-			salesCompany.endMonth();
-			break;
-		default:
-			System.out.println("Opcion invalida");
-			break;
-		}
-	}
-	
-	private void showSellers() {
-		System.out.println("Vendedores de la compañia");
+	private String showSellers() {
+		String sellers = "";
+		sellers = "Vendedores de la compañia\n";
 		for(int i=0; i<salesCompany.getSellers().size(); i++) {
-			System.out.println("id: "+salesCompany.getSellers().get(i).getId()+" nombre: "+salesCompany.getSellers().get(i).getName());
+			sellers += "id: "+salesCompany.getSellers().get(i).getId()+" nombre: "+salesCompany.getSellers().get(i).getName()+"\n";
 		}
+		return sellers;
 	}
 	
 	private void chooseMonth(int month) {
@@ -97,14 +75,14 @@ public class Simulator {
 		}
 	}
 	
-	private void monthStats(int stats) {
-		if(stats == 1) {
-			for(int i=0; i<salesCompany.getSellersMonth().size(); i++) { 
-				System.out.println("name: "+salesCompany.getSellersMonth().get(i).getName()+
-						", numero de ventas: "+salesCompany.getSellersMonth().get(i).getSales().size()+
-						", monto total de las ventas: $"+salesCompany.getSellersMonth().get(i).salesAmount());
-			}
+	private String monthStats() {
+		String statsSellers = "Estado de los vendedores del mes\n";
+		for(int i=0; i<salesCompany.getSellersMonth().size(); i++) { 
+			statsSellers += "Vendedor n°: "+salesCompany.getSellersMonth().get(i).getId()+", Nombre: "+salesCompany.getSellersMonth().get(i).getName()+
+					", Numero de ventas: "+salesCompany.getSellersMonth().get(i).getSales().size()+", Monto ventas: $"+salesCompany.getSellersMonth().get(i).salesAmount()+
+					", Porcentage de comision: %"+salesCompany.getSellersMonth().get(i).getPorcentage()+", Comsion pagada: $"+salesCompany.getSellersMonth().get(i).getComission()+"\n";
 		}
+		return statsSellers;
 	}
 	
 	private void showRegistry() {
@@ -113,5 +91,35 @@ public class Simulator {
 		}catch (IOException ex) {
             System.out.println(ex);
 		}
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() == comGUI.jbSellers) {
+			comGUI.jtaAnswers.setText(showSellers());
+		}else if(e.getSource() == comGUI.jbMonth) {
+			comGUI.jtaAnswers.setText(showMonthsCompany());
+		}else if(e.getSource() == comGUI.jbRegistry) {
+			comGUI.jtaAnswers.setText("Abriendo registro...");
+			showRegistry();
+		}else if(e.getSource() == comGUI.jbMakeMoth){
+			String alert = "";
+			try {				
+				int month = Integer.parseInt(comGUI.jtfMakeMonth.getText());
+				if(month >= 1 && month <= 12) {
+					chooseMonth(month);
+					salesCompany.comissionsPaymet();
+					comGUI.jtaAnswers.setText(monthStats());
+					salesCompany.endMonth();
+				}else {
+					alert = "El mes "+month+" no entra en el rango logico de meses";
+					comGUI.alertOption(alert);
+				}
+			} catch (NumberFormatException ex) {
+				alert = "No es un numero";
+				comGUI.alertOption(alert);
+			}			
+		}
+		
 	}
 }
