@@ -1,11 +1,13 @@
 package controller;
 
+import java.awt.Desktop;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
 import model.Company;
 import model.Month;
+import view.CommissionsGUI;
 import view.Forms;
 
 public class Simulator {
@@ -13,7 +15,7 @@ public class Simulator {
 	Company salesCompany;
 	Forms forms = new Forms();
 	
-	public Simulator(Company salesCompany) {
+	public Simulator(Company salesCompany, CommissionsGUI comGUI) {
 		System.out.println("Compañia de ventas SalesCompany");
 		this.salesCompany = salesCompany;
 	}
@@ -107,14 +109,9 @@ public class Simulator {
 	
 	private void showRegistry() {
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(salesCompany.getRegiFile()));
-			while(br.readLine() != null) {
-				System.out.println(br.readLine());
-			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+            Desktop.getDesktop().open(salesCompany.getRegiFile());
+		}catch (IOException ex) {
+            System.out.println(ex);
 		}
-		
 	}
 }
