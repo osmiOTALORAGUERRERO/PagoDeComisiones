@@ -43,8 +43,7 @@ public class Simulator implements ActionListener{
 		salesCompany.addSeller("Oscar", 6);
 		salesCompany.addSeller("Jaime", 7);
 		salesCompany.addSeller("Camila", 8);
-		salesCompany.addSeller("Heidy", 9);
-		salesCompany.addSeller("Stiven", 10);
+		
 	}
 	
 	private String showMonthsCompany() {
